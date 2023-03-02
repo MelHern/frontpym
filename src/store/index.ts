@@ -1,10 +1,15 @@
 import {defineStore} from 'pinia'
 
- const useAuth= defineStore('auth',{
+
+const useAuth= defineStore('auth',{
+
+    
 
 state:()=>{
     return{
-        token:null
+        token:null,
+        baseURL:process.env.BASEURL,
+        
     }
 },
 
@@ -25,9 +30,10 @@ actions:{
         })
         const response =await rawresponse.json()
 
-        if(response.status =false){
+        if(response.status ==false){
             return false
-        }else{
+        }
+        else{
             this.token=response.token
             return true
         }
@@ -57,12 +63,15 @@ actions:{
         }
 
         
-    },
+    }
 
+},
+persist:{
+    storage:sessionStorage,
+    paths:['token']
 }
 
-
-
-
 })
+
+
 export default useAuth

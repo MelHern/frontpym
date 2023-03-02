@@ -1,12 +1,14 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
+  <div>
+    <CabeceraComponent></CabeceraComponent>
+<ParallaxComponent></ParallaxComponent>
+    
   </div>
 </template>
 
 <script lang="ts" setup>
-
+import CabeceraComponent from '@/components/CabeceraComponent.vue';
+import ParallaxComponent from '@/components/ParallaxComponent.vue';
 
 </script>
 
