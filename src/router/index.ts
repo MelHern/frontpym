@@ -25,7 +25,7 @@ const routes: Array<RouteRecordRaw> = [
     name: 'dashboard',
     component: DashView,
     meta:{
-      requireAuth:true
+      requireAuth:false
     }
   },
   {
