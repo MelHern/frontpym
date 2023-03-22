@@ -13,7 +13,7 @@
 </template>
 
 <script lang="ts" setup>
-
+console.log(process.env.VUE_APP_BASEURL);
 </script>
 
 
