@@ -35,3 +35,11 @@
 //     }
 //   }
 // }
+
+Cypress.Commands.add('login',(email,password)=>{
+
+    cy.visit(Cypress.env('host'))
+    // cy.get('#email').type(email)
+    // cy.get('#password').type(password)
+    // cy.get('button').click()
+});
